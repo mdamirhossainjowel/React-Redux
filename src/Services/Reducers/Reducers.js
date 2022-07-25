@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT, RESET } from "../Constants/Constats";
+import { DECREMENT, INCREMENT, INCREMENTBYVALUE, RESET } from "../Constants/Constats";
 
 const initialCount={
     count:0
@@ -20,6 +20,11 @@ switch (action.type) {
         return{
             ...state,
             count:0,
+        }
+    case INCREMENTBYVALUE:
+        return{
+            ...state,
+            count:state.count+action.payload,
         }
 
     default:
