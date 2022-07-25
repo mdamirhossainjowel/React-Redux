@@ -27,4 +27,4 @@ switch (action.type) {
 }
 }
 
-export default Reducers
+export default counterReducer
